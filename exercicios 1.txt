@@ -1,0 +1,29 @@
+import datetime
+
+nome = input('Qual é o seu nome? ')
+ano_nascimento = int(input('Qual o seu ano de nascimento? '))
+idade = datetime.datetime.now().year - ano_nascimento
+
+if idade >= 18:
+    escolaridade = input('Digite sua escolaridade (Ensino Médio Completo ou Ensino Superior Completo): ') #deixa a resposta case insensitive
+    if escolaridade.lower() == "ensino medio completo":
+        print()
+        print('Opções de cursos superiores:')
+        print()
+        print('- Medicina ')
+        print('- Ciência da Computação')
+        print('- Direito')
+        
+    elif escolaridade.lower() == "ensino superior completo":
+        print()
+        print('Opções de pós-graduação:')
+        print()
+        print('- MBA em Cardiologia')
+        print('- Mestrado em Ciência da Computação')
+        print('- Especialização em Direito Tributário')
+        
+    else:
+        print('Curso não reconhecido')
+    
+else:
+    print(f'Ops, parece que tivemos um problema por aqui. Você tem apenas {idade} anos, é preciso ser maior para conitnuar')
